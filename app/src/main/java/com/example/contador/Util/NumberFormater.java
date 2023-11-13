@@ -14,14 +14,7 @@ public class NumberFormater {
         if (number.compareTo(BigInteger.valueOf(1000)) < 0) {
             return String.format("%s%s", number, "");
         }
-
-        /*
-
-            Hace el logaritmo de del numero en base 1000
-
-            Ln(10000) / Ln (1000) => Log(1000) 10000 => 2
-
-         */
+        
         int exp = (int) (Math.log(number.doubleValue()) / Math.log(1000));
 
         ArrayList<String>  valoresNumericos = new ArrayList<>();
